@@ -1,0 +1,24 @@
+- name: datatypes
+  hosts: local
+  connection: local
+  vars:
+    PROGRAM: "DevSecOps with AWS" #String
+    DURATION: 140 #Number/int
+    IS_LIVE: true #bool
+    DETAILS: #Map/Dictionary
+      MONTHS: 4
+      TRAINER: "SANDEEP NARAYANA"
+    TOPICS: #list
+    - Linux
+    - Shell
+    - Ansible
+  tasks:
+  - name: print varilables
+    ansible.builtin.debug:
+      msg: |
+        PROGRAM: {{ PROGRAM }}
+        Duration: {{ DURATION }}
+        IS_Live: {{ IS_LIVE }}
+        Details: {{ DETAILS }}
+        Topics: {{ TOPICS }}
+
