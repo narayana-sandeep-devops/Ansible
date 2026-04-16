@@ -1,0 +1,7 @@
+---
+- name: first playbook
+  hosts: all
+  tasks:
+    - name: git
+      state: present
+    -

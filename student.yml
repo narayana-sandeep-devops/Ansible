@@ -1,0 +1,23 @@
+- name: "Sandeep Narayana"
+  dob: "1990-08-24"
+  mobile: 9632233232
+  address:
+  - flat: 101
+    street: "gandhi nagar"
+    city: "bangalore"
+
+  - flat: 102
+    street: "nehru nagar"
+    city: "hyderabad"
+
+- name: "Nandini"
+  dob: "1995-05-15"
+  mobile: 963222332
+  address:
+  - flat: 201
+    street: "rahul nagar"
+    city: "delhi"
+    
+  - flat: 202
+    street: "priyanka nagar"
+    city: "kolkata"
