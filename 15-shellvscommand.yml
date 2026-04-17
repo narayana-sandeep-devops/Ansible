@@ -19,7 +19,7 @@
       msg: " {{ user_output }}"
 
   - name: shell module
-    ansible.builtin.shell: ls -ltr > file.txt
+    ansible.builtin.shell: ls -ltr | tee file.txt
     register: files_output
 
   - name: print files user_output

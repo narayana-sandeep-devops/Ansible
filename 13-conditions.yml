@@ -7,4 +7,4 @@
   - name: is ansible is greathan 7
     ansible.builtin.debug:
       msg: "yes, more than 5 sessions"
-    when NUMBER_OF_SESSIONS > 5
+    when: NUMBER_OF_SESSIONS > 5
