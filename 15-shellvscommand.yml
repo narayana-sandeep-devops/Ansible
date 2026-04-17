@@ -3,9 +3,16 @@
   connection: local
   tasks:
   - name: command module test
-    ansible.builtin.command: cat /etc/passwd | root
+    ansible.builtin.command: cat /etc/passwd
+    register: user_list
+  
+  - name: shell module test
+    ansible.builtin.shell: cat /etc/passwd | root
     register: user_output
   
+  - name: print user user_list
+    ansible.builtin.debug:
+      msg: " {{ user_list }}"
   - name: print user_output
     ansible.builtin.debug:
       msg: " {{ user_output }}"
