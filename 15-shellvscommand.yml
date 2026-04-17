@@ -17,3 +17,11 @@
   - name: print user_output
     ansible.builtin.debug:
       msg: " {{ user_output }}"
+
+  - name: shell module
+    ansible.builtin.shell: ls -ltr > file.txt
+    register: files_output
+
+  - name: print files user_output
+    ansible.builtin.debug:
+      msg: "{{ files_output }}"
