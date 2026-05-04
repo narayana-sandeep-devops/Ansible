@@ -1,0 +1,52 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars:
+    topics: linux, shell, ansible, terraform
+    tagsMap:
+      name: ansible
+      project: roboshop
+      component: catalogue
+    tagsLists: [
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "component",
+            "value": "catalogue"
+        }
+    ]
+  myip: "192.168.1.2"
+  tasks:
+  - name: greeting
+    ansible.builtin.debug:
+      msg: "Hi Sandeep {{ GREETING | default('Good Morning ') }}"
+
+  - name: convert the string to list
+    ansible.builtin.debug:
+      msg: " {{ topics | split(',') }} "
+
+  - name: convert map to list
+    ansible.builtin.debug:
+      msg: " {{ tagsMap | dict2items }}"
+  
+  - name: convert list to map
+    ansible.builtin.debug:
+      msg:: " {{ tagsLists | items2dict }}"
+
+  - name: read student yaml file
+    ansible.builtin.set_fact:
+      student_yaml: " {{ lookup('file', 'students.yaml') | from_yaml }}"
+
+  - name: convert YAML to JSON
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json }}"
+  
+  - name: check ip
+    ansible.builtin.debug:
+    msg: " {{ myip | ansible.utils.ipv4 }}"
