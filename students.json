@@ -1,0 +1,22 @@
+{
+    "first_name": "Radha",
+    "Last_name": "Kumari",
+    "dob": "1990-08-24",
+    "Addresses": [
+        {
+            "type": "home",
+            "flatnumber": "104",
+            "street": "MG Road",
+            "city": "Bangalore",
+            "state": "Karnataka"
+        },
+        {
+            "type": "office",
+            "flatnumber": "201",
+            "street": "Brigade Road",
+            "city": "Bangalore",
+            "state": "Karnataka"
+        }
+    ],
+    "skills": ["Python", "Ansible", "Docker"]
+}

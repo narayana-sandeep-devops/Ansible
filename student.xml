@@ -1,0 +1,19 @@
+<Students>
+    <student>
+        <name>John Doe</name>
+        <age>20</age>
+        <email>john.doe@example.com</email>
+        <Address>
+            <PermanentAddress>
+                <Flatnumber>123</Flatnumber>
+                <Street>Main Street</Street>
+                <City>New York</City>
+            </PermanentAddress>
+            <CurrentAddress>
+                <Flatnumber>123</Flatnumber>
+                <Street>Main Street</Street>
+                <City>New York</City>
+            </CurrentAddress>
+        </Address>
+    </student>
+</Students>
