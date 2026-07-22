@@ -7,5 +7,7 @@
     Trainer: "Sandeep Narayana"
   tasks:
   - name: Print Course Name
+    vars:
+      Course: "DevOps with Azure"
     ansible.builtin.debug:
       msg: "Course Name is {{ Course }}, Trainer is {{Trainer }}"
