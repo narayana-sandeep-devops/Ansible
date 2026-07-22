@@ -1,5 +1,5 @@
 - name: Print username and password
-  hosts: local
+  hosts: Local
   connection: local
   vars_prompt:
   - name: "username"

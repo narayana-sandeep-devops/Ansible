@@ -1,5 +1,5 @@
 - name: Play level variables
-  hosts: localhost
+  hosts: Local
   connection: local
   vars_files:
   - 06-course.yaml
